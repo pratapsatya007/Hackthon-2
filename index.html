@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>STOP CLOCK</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!--stop clock-->
+    <div id="scbg">
+      <div id="scbg-2">
+        <div id="hr1">0</div>
+        <div id="hr">0</div>
+        <div class="sym">:</div>
+        <div id="min1">0</div>
+        <div id="min">0</div>
+        <div class="sym">:</div>
+        <div id="sec1">0</div>
+        <div id="sec">0</div>
+      </div>
+      <section id="btns">
+        <button id="start" onclick="call()">Start</button>
+        <button id="stop" onclick="clearInterval(setInterval(timer, 1000))">
+          Stop
+        </button>
+        <button id="reset" onclick="reset()">Reset</button>
+      </section>
+    </div>
+    <br /><br /><br />
+    <!--to do list-->
+    <div id="header">
+      <h1>TODO LIST</h1>
+      <section id="input">
+        <input
+          type="text"
+          placeholder="Type a task"
+          size="50"
+          id="task"
+          style="
+            padding-left: 5px;
+            border-radius: 5%;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 400;
+          "
+        />
+        <button id="add" onclick="todo()">ADD</button>
+      </section>
+    </div>
+    <div id="tcp">
+      <h2 id="head"></h2>
+      <div id="tasklist"></div>
+    </div>
+    <br /><br />
+    <!--music board-->
+    <div id="mbsty">
+      <h2 id="piano">PIANO</h2>
+    </div>
+    <div id="mb">
+      <button class="keysty" onclick="playbtn1()">
+        <audio src="./piano-mp3_Ab4.mp3" id="m1"></audio>
+      </button>
+      <button class="keysty" onclick="playbtn2()">
+        <audio src="./paino-note_150bpm_F_minor.wav" id="m2"></audio>
+      </button>
+      <button class="keysty" onclick="playbtn3()">
+        <audio src="./piano-c_C_major.wav" id="m3"></audio>
+      </button>
+      <button class="keysty" onclick="playbtn4()">
+        <audio src="./piano-f_F_major.wav" id="m4"></audio>
+      </button>
+      <button class="keysty" onclick="playbtn5()">
+        <audio src="./soft-piano-note_120bpm_E_major.wav" id="m5"></audio>
+      </button>
+    </div>
+    <br /><br /><br /><br />
+    <script src="script.js"></script>
+  </body>
+</html>
